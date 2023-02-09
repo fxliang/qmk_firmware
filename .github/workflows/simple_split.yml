@@ -30,7 +30,9 @@ jobs:
       
       - name: Install dependencies
         run: pip3 install -r requirements.txt
-      
+      - name: Install qmk
+        run: python3 -m pip install qmk
+        
       # Runs a single command using the runners shell
       - name: Build firmware
         run: make pico_pico_usb/simple_split:default
